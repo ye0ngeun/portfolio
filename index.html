@@ -5,39 +5,207 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>portfolio</title>
+        <title>YEONG EUN LEE | portfolio</title>
 
         <link rel="stylesheet" href="style.css">
 
     </head>
 
-    <body style="background-color: #fef6e9;">
-        <header class="header">
-            <div class="header-title">0eun.</div>
-            <nav class="navigator">
-                <a href="">ABOUT</a>
-                <a href="">WORK</a>
-                <a href="">POSTING</a>
-            </nav>
+    <body>
+
+        <header>
+            <div class="container">
+                <h1>0eun.</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#main">About</a>
+                        </li>
+                        <li>
+                            <a href="#experience">Experience</a>
+                        </li>
+                        <li>Posting</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <main class="main">
-            <div class="main-introduction">
-                <h1 class="slogan">세상에 따뜻함을 전하는 개발자,
-                    <br>
-                    <span style="color: #ca1e36;">이영은</span>
-                    입니다
-                </h1>
-                <img src="https://placehold.co/400" alt="" class="img">
+        <!-- page 1 -->
+        <div class="page hero-page" id="main">
+            <section class="hero">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <h2>
+                            세상에 따뜻함을 전하는 개발자,<br/>
+                            <span style="color: #ca1e36">이영은</span>입니다
+                        </h2>
+                    </div>
+                    <div class="hero-image">
+                        <img src="profile.png" alt="Profile photo"/>
+                    </div>
+                </div>
+            </section>
 
-            </div>
+            <section class="about">
+                <div class="container grid-3">
+                    <div>
+                        <h3>Bachelor</h3>
+                        <p>Hongik University,<br/>Dept. Computer Engineering</p>
+                    </div>
+                    <div>
+                        <h3>Certificates</h3>
+                        <p>정보처리기사<br/>SQLD</p>
+                    </div>
+                    <div>
+                        <h3>Contact</h3>
+                        <p>yeongeun85@naver.com<br/>github.com/ye0ngeun</p>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-            <div class="content">
-                <h2 class="sub-title">contact</h2>
-                <h2 class="sub-title">work</h2>
-                <h2 class="sub-title">interest</h2>
-            </div>
+        <!-- page 2 -->
+        <div class="page skills-page" id="experience">
+            <!-- experience -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <h2>Experience</h2>
+                    <ul class="timeline">
 
-        </main>
+                        <!-- Experience 1 -->
+                        <li>
+                            <div class="experience-left">
+                                <div class="company">우리FIS 아카데미</div>
+                                <div class="period">2025.07 -</div>
+                            </div>
+                            <div class="experience-right">
+                                <p class="job-title">클라우드 서비스 개발 트랙</p>
+                            </div>
+                        </li>
+
+                        <!-- Experience 2 -->
+                        <li>
+                            <div class="experience-left">
+                                <div class="company">에프아이솔루션</div>
+                                <div class="period">2022.12 - 2023.10</div>
+                            </div>
+                            <div class="experience-right">
+                                <p class="job-title">백엔드 엔지니어</p>
+                                <ul class="job-desc">
+                                    <li>• 유아시설정보플랫폼 아이러빗</li>
+                                    <li>• 사내 콜센터 백오피스</li>
+                                    <li>• 유아동 지문등록 간편신청</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- tech-stacks -->
+            <section id="skills" class="section">
+                <div class="container">
+                    <h2>Tech Stacks</h2>
+                    <div class="tech-stacks">
+
+                        <div class="stack-row">
+                            <div class="stack-label">Language</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="Java"
+                                    src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white">
+                                <img
+                                    alt="Python"
+                                    src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+                                <img
+                                    alt="JavaScript"
+                                    src="https://img.shields.io/badge/Javascript-f7df1e?style=flat-square&logo=javascript&logoColor=white"/>
+                            </div>
+                        </div>
+
+                        <div class="stack-row">
+                            <div class="stack-label">Frontend</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="HTML5"
+                                    src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"/>
+                                <img
+                                    alt="CSS3"
+                                    src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white"/>
+                            </div>
+                        </div>
+
+                        <div class="stack-row">
+                            <div class="stack-label">Backend</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="Spring"
+                                    src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>
+                                <img
+                                    alt="Spring Boot"
+                                    src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
+                                <img
+                                    alt="Node.js"
+                                    src="https://img.shields.io/badge/node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white"/>
+                                <img
+                                    alt="Express"
+                                    src="https://img.shields.io/badge/express.js-%23404d59.svg?style=flat-square&logo=express&logoColor=%2361DAFB"/>
+                            </div>
+                        </div>
+                        <div class="stack-row">
+                            <div class="stack-label">Database</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="MySQL"
+                                    src="https://img.shields.io/badge/mysql-4479A1.svg?style=flat-square&logo=mysql&logoColor=white"/>
+                            </div>
+                        </div>
+
+                        <div class="stack-row">
+                            <div class="stack-label">DevOps</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="AWS"
+                                    src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white"/>
+                                <img
+                                    alt="nginx"
+                                    src="https://img.shields.io/badge/nginx-%23009639.svg?style=flat-square&logo=nginx&logoColor=white"/>
+                                <img
+                                    alt="Docker"
+                                    src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white"/>
+                                <img
+                                    alt="GitHub Actions"
+                                    src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat-square&logo=githubactions&logoColor=white"/>
+                                <img
+                                    alt="SSL"
+                                    src="https://img.shields.io/badge/SSL-0170bd?style=flat-square&logo=SSL&logoColor=white"/>
+                            </div>
+                        </div>
+
+                        <div class="stack-row">
+                            <div class="stack-label">Tools</div>
+                            <div class="stack-icons">
+                                <img
+                                    alt="Git"
+                                    src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+                                <img
+                                    alt="GitHub"
+                                    src="https://img.shields.io/badge/Git-181717?style=flat-square&logo=github&logoColor=white"/>
+                                <img
+                                    alt="Swagger"
+                                    src="https://img.shields.io/badge/-Swagger-%23Clojure?style=flat-square&logo=swagger&logoColor=white"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            © 2025 YEONG EUN LEE. All rights reserved.
+        </footer>
     </body>
 </html>

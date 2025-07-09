@@ -1,84 +1,209 @@
-html, body {
-    height: 100%;
+body,
+html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
-.header { 
+/* 전체 페이지 */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 40px);
+}
+
+/* 헤더 */
+header {
     position: fixed;
     top: 0;
-    left: 0;
+    height: 120px;
     width: 100%;
-    height: 100px;
     background-color: #fef6e9;
+    color: #1a1a1a;
+    z-index: 999;
+}
+
+header .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4%;
-    box-sizing: border-box;
-    z-index: 1000;
-    font-family: Pretendard-Bold, sans-serif;
+    padding: 0 clamp(10px, 5vw, 40px);
 }
 
-.header-title {
-    font-size: 30px;
+header h1 {
+    margin: 0;
+    font-size: clamp(18px, 2vw, 26px);
 }
 
-.navigator {
+nav ul {
     display: flex;
-    gap: 30px;
-    padding-right: 5vw;
-    font-size: 15px;
-    font-style: bold;
+    gap: clamp(10px, 2vw, 30px);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navigator a {
+nav a {
+    color: #1a1a1a;
     text-decoration: none;
-    color: #181717;
 }
 
-.navigator a:hover {
-    color: #ca1e36;
-    cursor: pointer;
+/* Hero 영역 */
+.hero {
+    background-color: #fef6e9;
+    padding-block: clamp(60px, 25vh, 200px);
 }
 
-.main {
-    margin-top: 100px;
-    padding-left: 20%;
-    padding-right: 20%;
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20px, 5vw, 60px);
 }
 
-.main-introduction {
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.4;
+}
+.hero-image img {
+    width: clamp(180px, 25vw, 280px);
+    border-radius: 12px;
+}
+
+/* About 영역 */
+.about h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(20px, 4vw, 40px);
+}
+
+.experience-left,
+.experience-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.experience-left {
+    flex: 0 0 20%;
+    font-weight: bold;
+}
+
+.company {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+.period {
+    font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+    color: #777;
+    margin-top: 4px;
+}
+
+.experience-right {
+    flex: 1;
+}
+
+.job-title {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.job-desc {
+    margin: 0;
+    padding-left: 0;
+}
+
+.job-desc li {
+    position: relative;
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    margin-bottom: 4px;
+}
+
+/* tech-stacks 영역 */
+.tech-stacks {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 3vh, 32px);
+}
+
+.stack-row {
     display: flex;
     align-items: center;
-    gap: 30px;
-    height: calc(100vh - 100px);
-    padding: 20px;
-    box-sizing: border-box;
-    max-width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 40px);
 }
 
-.slogan {
-    white-space: nowrap;
-    font-size: clamp(16px, 4vw, 36px);
-    margin: 18px 0;
+.stack-label {
+    flex: 0 0 120px;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
 }
 
-
-.img {
-    width: clamp(40%, 4vw, 70%);
-    height: auto;
-    object-fit: cover;
-    border-radius: 16px;
-    display: block;
-    margin: 0 auto;
+.stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: clamp(8px, 1vw, 16px);
 }
 
-.content {
-    padding-top: 10%;
+.stack-icons img {
+    height: clamp(24px, 2.5vw, 32px);
+    width: auto;
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
 }
 
-.sub-title {
-    border-bottom: 1px solid #181717;
-    padding-bottom: 1px;
-}   
+.stack-icons img:hover {
+    filter: none;
+}
+
+/* experience 영역 */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li {
+    display: flex;
+    gap: clamp(20px, 5vw, 60px);
+    margin-bottom: clamp(20px, 4vh, 40px);
+    align-items: baseline;
+}
+
+/* footer 영역 */
+footer {
+    text-align: center;
+    padding: clamp(16px, 4vh, 32px);
+    color: gray;
+}
